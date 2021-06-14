@@ -1,9 +1,9 @@
 <div class='container-fluid'>
   <p id="notice"><%= notice %></p>
   <div class='row py-3 px-3'>
-    <div class='col-12 col-sm-8'>
-      <h3 class=''>Employees</h3>
-      <table id='employee-table' class="table table-hover">
+    <div class='col-12 col-md-8'>
+      <h3 class='text-center'>Employees</h3>
+      <table id='employee-table' class="table table-dark table-hover">
         <thead  class="thead-light">
           <tr>
             <th>Name</th>
@@ -24,8 +24,6 @@
               <td><%= employee.extension %></td>
               <td><%= employee.start_date %></td>
               <td><%= link_to 'Show', employee %></td>
-              <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-              <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
@@ -33,8 +31,8 @@
       <br>
     </div>
 
-    <div class='col-12 col-sm-4'>
-      <h3>New Employee</h3>
+    <div class='col-12 col-md-4'>
+      <h3 class="text-center">New Employee</h3>
       <%= render 'form', employee: @employee %>
     </div>
   </div>
